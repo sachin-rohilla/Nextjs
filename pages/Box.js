@@ -9,6 +9,19 @@ const Box = () => {
       <div>
         <Image src="/p.jpg" width={1920} height={1000} alt="photo" />
       </div>
+      <div className={style.main}>
+        {Data.map((item) => {
+          return (
+            <>
+              <div className={style.container}>
+                <Image src="/s.jpg" width={300} height={200} alt="photo" />
+                <h2 className={style.heading}>{item.title}</h2>
+                <p className={style.paras}>{item.name}</p>
+              </div>
+            </>
+          );
+        })}
+      </div>
       <div className={style.main2}>
         <p className={style.para}>
           {" "}
@@ -42,6 +55,7 @@ const Box = () => {
           with others.
         </p>
       </div>
+
       <Footer />
     </>
   );
